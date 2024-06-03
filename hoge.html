@@ -1,0 +1,2817 @@
+<html>
+  <head title="Thread Dump Table Viewer">
+    <meta>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==">
+    
+    <style>body {
+    background-color: rgb(18, 23, 29);
+}
+table {
+    color: #dbdbdb;
+}
+th {
+    background-color: rgb(2, 5, 11);
+    font-size: 12px;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    word-break: break-all;
+}
+td {
+    padding: 10px;
+    vertical-align: top;
+}
+thead th span {
+    display: block; width: 620px;
+}
+pre {
+    background-color: rgb(30, 33, 39);
+    padding: 10px;
+    border-radius: 5px;
+    width: 600px;
+    overflow-x: scroll;
+    font-size: 12px;
+}
+.hidden {
+    display: none;
+}
+#thread-name-filter span, .thread-name span{
+    display: block;
+    width: 250px;
+}
+#thread-name-filter input {
+    padding: 5px;
+    width: 100%;
+}</style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th id="thread-name-filter"><span><input type="text" placeholder="Filter by thread name"></span></th>
+          <th><span>2024-06-03 21:58:51<br>/Users/jp11644/Desktop/hoge1.txt</span></th>
+          <th><span>2024-06-03 21:58:53<br>/Users/jp11644/Desktop/hoge2.txt</span></th>
+          <th><span>2024-06-03 21:58:55<br>/Users/jp11644/Desktop/hoge3.txt</span></th>
+          <th><span>2024-06-03 21:58:56<br>/Users/jp11644/Desktop/hoge4.txt</span></th>
+          <th><span>2024-06-03 21:58:58<br>/Users/jp11644/Desktop/hoge5.txt</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="thread-name"><span>Attach Listener</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>C1 CompilerThread0</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>C2 CompilerThread0</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Cache worker for file content cache (/Users/jp11644/.gradle/caches/8.7/fileContent)</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282240&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282240&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282240&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282240&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282240&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Cache worker for file hash cache (/Users/jp11644/.gradle/caches/8.7/fileHashes)</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3276568&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3276568&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3276568&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3276568&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3276568&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Cache worker for journal cache (/Users/jp11644/.gradle/caches/journal-1)</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e32a5d50&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e32a5d50&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e32a5d50&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e32a5d50&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e32a5d50&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.takeFromQueue(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:133)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Common-Cleaner</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e07c8100&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1847)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.2/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.2/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.2/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.2/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.2/InnocuousThread.java:186)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e07c8100&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1847)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.2/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.2/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.2/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.2/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.2/InnocuousThread.java:186)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e07c8100&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1847)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.2/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.2/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.2/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.2/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.2/InnocuousThread.java:186)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e07c8100&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1847)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.2/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.2/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.2/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.2/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.2/InnocuousThread.java:186)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e07c8100&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1847)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.2/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.2/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.2/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.2/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.2/InnocuousThread.java:186)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Daemon health stats</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5de18&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5de18&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5de18&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5de18&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5de18&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Daemon periodic checks</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5e628&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5e628&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5e628&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5e628&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5e628&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>File lock request listener</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.DatagramChannelImpl.receive0(java.base@21.0.2/Native Method)
+	at sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(java.base@21.0.2/DatagramChannelImpl.java:814)
+	at sun.nio.ch.DatagramChannelImpl.receive(java.base@21.0.2/DatagramChannelImpl.java:790)
+	at sun.nio.ch.DatagramChannelImpl.tryBlockingReceive(java.base@21.0.2/DatagramChannelImpl.java:751)
+	at sun.nio.ch.DatagramChannelImpl.blockingReceive(java.base@21.0.2/DatagramChannelImpl.java:692)
+	at sun.nio.ch.DatagramSocketAdaptor.receive(java.base@21.0.2/DatagramSocketAdaptor.java:204)
+	at java.net.DatagramSocket.receive(java.base@21.0.2/DatagramSocket.java:714)
+	at org.gradle.cache.internal.locklistener.FileLockCommunicator.receive(FileLockCommunicator.java:86)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler$1.doRun(DefaultFileLockContentionHandler.java:119)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler$1.run(DefaultFileLockContentionHandler.java:105)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.DatagramChannelImpl.receive0(java.base@21.0.2/Native Method)
+	at sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(java.base@21.0.2/DatagramChannelImpl.java:814)
+	at sun.nio.ch.DatagramChannelImpl.receive(java.base@21.0.2/DatagramChannelImpl.java:790)
+	at sun.nio.ch.DatagramChannelImpl.tryBlockingReceive(java.base@21.0.2/DatagramChannelImpl.java:751)
+	at sun.nio.ch.DatagramChannelImpl.blockingReceive(java.base@21.0.2/DatagramChannelImpl.java:692)
+	at sun.nio.ch.DatagramSocketAdaptor.receive(java.base@21.0.2/DatagramSocketAdaptor.java:204)
+	at java.net.DatagramSocket.receive(java.base@21.0.2/DatagramSocket.java:714)
+	at org.gradle.cache.internal.locklistener.FileLockCommunicator.receive(FileLockCommunicator.java:86)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler$1.doRun(DefaultFileLockContentionHandler.java:119)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler$1.run(DefaultFileLockContentionHandler.java:105)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.DatagramChannelImpl.receive0(java.base@21.0.2/Native Method)
+	at sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(java.base@21.0.2/DatagramChannelImpl.java:814)
+	at sun.nio.ch.DatagramChannelImpl.receive(java.base@21.0.2/DatagramChannelImpl.java:790)
+	at sun.nio.ch.DatagramChannelImpl.tryBlockingReceive(java.base@21.0.2/DatagramChannelImpl.java:751)
+	at sun.nio.ch.DatagramChannelImpl.blockingReceive(java.base@21.0.2/DatagramChannelImpl.java:692)
+	at sun.nio.ch.DatagramSocketAdaptor.receive(java.base@21.0.2/DatagramSocketAdaptor.java:204)
+	at java.net.DatagramSocket.receive(java.base@21.0.2/DatagramSocket.java:714)
+	at org.gradle.cache.internal.locklistener.FileLockCommunicator.receive(FileLockCommunicator.java:86)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler$1.doRun(DefaultFileLockContentionHandler.java:119)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler$1.run(DefaultFileLockContentionHandler.java:105)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.DatagramChannelImpl.receive0(java.base@21.0.2/Native Method)
+	at sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(java.base@21.0.2/DatagramChannelImpl.java:814)
+	at sun.nio.ch.DatagramChannelImpl.receive(java.base@21.0.2/DatagramChannelImpl.java:790)
+	at sun.nio.ch.DatagramChannelImpl.tryBlockingReceive(java.base@21.0.2/DatagramChannelImpl.java:751)
+	at sun.nio.ch.DatagramChannelImpl.blockingReceive(java.base@21.0.2/DatagramChannelImpl.java:692)
+	at sun.nio.ch.DatagramSocketAdaptor.receive(java.base@21.0.2/DatagramSocketAdaptor.java:204)
+	at java.net.DatagramSocket.receive(java.base@21.0.2/DatagramSocket.java:714)
+	at org.gradle.cache.internal.locklistener.FileLockCommunicator.receive(FileLockCommunicator.java:86)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler$1.doRun(DefaultFileLockContentionHandler.java:119)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler$1.run(DefaultFileLockContentionHandler.java:105)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.DatagramChannelImpl.receive0(java.base@21.0.2/Native Method)
+	at sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(java.base@21.0.2/DatagramChannelImpl.java:814)
+	at sun.nio.ch.DatagramChannelImpl.receive(java.base@21.0.2/DatagramChannelImpl.java:790)
+	at sun.nio.ch.DatagramChannelImpl.tryBlockingReceive(java.base@21.0.2/DatagramChannelImpl.java:751)
+	at sun.nio.ch.DatagramChannelImpl.blockingReceive(java.base@21.0.2/DatagramChannelImpl.java:692)
+	at sun.nio.ch.DatagramSocketAdaptor.receive(java.base@21.0.2/DatagramSocketAdaptor.java:204)
+	at java.net.DatagramSocket.receive(java.base@21.0.2/DatagramSocket.java:714)
+	at org.gradle.cache.internal.locklistener.FileLockCommunicator.receive(FileLockCommunicator.java:86)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler$1.doRun(DefaultFileLockContentionHandler.java:119)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler$1.run(DefaultFileLockContentionHandler.java:105)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>File watcher consumer</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e32c9a58&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry.lambda$createAndStartEventConsumerThread$0(DefaultFileWatcherRegistry.java:82)
+	at org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry$$Lambda/0x000000080047b968.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e32c9a58&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry.lambda$createAndStartEventConsumerThread$0(DefaultFileWatcherRegistry.java:82)
+	at org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry$$Lambda/0x000000080047b968.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e32c9a58&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry.lambda$createAndStartEventConsumerThread$0(DefaultFileWatcherRegistry.java:82)
+	at org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry$$Lambda/0x000000080047b968.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e32c9a58&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry.lambda$createAndStartEventConsumerThread$0(DefaultFileWatcherRegistry.java:82)
+	at org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry$$Lambda/0x000000080047b968.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e32c9a58&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@21.0.2/ArrayBlockingQueue.java:420)
+	at org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry.lambda$createAndStartEventConsumerThread$0(DefaultFileWatcherRegistry.java:82)
+	at org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry$$Lambda/0x000000080047b968.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>File watcher server</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at net.rubygrapefruit.platform.internal.jni.AbstractNativeFileEventFunctions$NativeFileWatcher.executeRunLoop0(Native Method)
+	at net.rubygrapefruit.platform.internal.jni.AbstractNativeFileEventFunctions$NativeFileWatcher.executeRunLoop(AbstractNativeFileEventFunctions.java:42)
+	at net.rubygrapefruit.platform.internal.jni.AbstractFileEventFunctions$AbstractFileWatcher$1.run(AbstractFileEventFunctions.java:154)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at net.rubygrapefruit.platform.internal.jni.AbstractNativeFileEventFunctions$NativeFileWatcher.executeRunLoop0(Native Method)
+	at net.rubygrapefruit.platform.internal.jni.AbstractNativeFileEventFunctions$NativeFileWatcher.executeRunLoop(AbstractNativeFileEventFunctions.java:42)
+	at net.rubygrapefruit.platform.internal.jni.AbstractFileEventFunctions$AbstractFileWatcher$1.run(AbstractFileEventFunctions.java:154)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at net.rubygrapefruit.platform.internal.jni.AbstractNativeFileEventFunctions$NativeFileWatcher.executeRunLoop0(Native Method)
+	at net.rubygrapefruit.platform.internal.jni.AbstractNativeFileEventFunctions$NativeFileWatcher.executeRunLoop(AbstractNativeFileEventFunctions.java:42)
+	at net.rubygrapefruit.platform.internal.jni.AbstractFileEventFunctions$AbstractFileWatcher$1.run(AbstractFileEventFunctions.java:154)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at net.rubygrapefruit.platform.internal.jni.AbstractNativeFileEventFunctions$NativeFileWatcher.executeRunLoop0(Native Method)
+	at net.rubygrapefruit.platform.internal.jni.AbstractNativeFileEventFunctions$NativeFileWatcher.executeRunLoop(AbstractNativeFileEventFunctions.java:42)
+	at net.rubygrapefruit.platform.internal.jni.AbstractFileEventFunctions$AbstractFileWatcher$1.run(AbstractFileEventFunctions.java:154)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at net.rubygrapefruit.platform.internal.jni.AbstractNativeFileEventFunctions$NativeFileWatcher.executeRunLoop0(Native Method)
+	at net.rubygrapefruit.platform.internal.jni.AbstractNativeFileEventFunctions$NativeFileWatcher.executeRunLoop(AbstractNativeFileEventFunctions.java:42)
+	at net.rubygrapefruit.platform.internal.jni.AbstractFileEventFunctions$AbstractFileWatcher$1.run(AbstractFileEventFunctions.java:154)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Finalizer</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.2/Native Method)
+	- waiting on &lt;no object reference available&gt;
+	at java.lang.Object.wait(java.base@21.0.2/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.2/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.2/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.2/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.2/NativeReferenceQueue.java:89)
+	- locked &lt;0x00000007e07b70a0&gt; (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.2/Finalizer.java:173)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.2/Native Method)
+	- waiting on &lt;no object reference available&gt;
+	at java.lang.Object.wait(java.base@21.0.2/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.2/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.2/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.2/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.2/NativeReferenceQueue.java:89)
+	- locked &lt;0x00000007e07b70a0&gt; (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.2/Finalizer.java:173)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.2/Native Method)
+	- waiting on &lt;no object reference available&gt;
+	at java.lang.Object.wait(java.base@21.0.2/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.2/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.2/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.2/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.2/NativeReferenceQueue.java:89)
+	- locked &lt;0x00000007e07b70a0&gt; (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.2/Finalizer.java:173)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.2/Native Method)
+	- waiting on &lt;no object reference available&gt;
+	at java.lang.Object.wait(java.base@21.0.2/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.2/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.2/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.2/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.2/NativeReferenceQueue.java:89)
+	- locked &lt;0x00000007e07b70a0&gt; (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.2/Finalizer.java:173)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.2/Native Method)
+	- waiting on &lt;no object reference available&gt;
+	at java.lang.Object.wait(java.base@21.0.2/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.2/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.2/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.2/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.2/NativeReferenceQueue.java:89)
+	- locked &lt;0x00000007e07b70a0&gt; (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.2/Finalizer.java:173)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>G1 Conc#0</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>G1 Conc#1</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>G1 Main Marker</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>G1 Refine#0</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>G1 Service</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>GC Thread#0</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>GC Thread#1</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>GC Thread#2</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>GC Thread#3</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>GC Thread#4</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>GC Thread#5</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>GC Thread#6</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>GC Thread#7</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>GC Thread#8</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Incoming local TCP Connector on port 65471</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.accept(java.base@21.0.2/Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.implAccept(java.base@21.0.2/ServerSocketChannelImpl.java:433)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(java.base@21.0.2/ServerSocketChannelImpl.java:399)
+	at org.gradle.internal.remote.internal.inet.TcpIncomingConnector$Receiver.run(TcpIncomingConnector.java:108)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.accept(java.base@21.0.2/Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.implAccept(java.base@21.0.2/ServerSocketChannelImpl.java:433)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(java.base@21.0.2/ServerSocketChannelImpl.java:399)
+	at org.gradle.internal.remote.internal.inet.TcpIncomingConnector$Receiver.run(TcpIncomingConnector.java:108)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.accept(java.base@21.0.2/Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.implAccept(java.base@21.0.2/ServerSocketChannelImpl.java:433)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(java.base@21.0.2/ServerSocketChannelImpl.java:399)
+	at org.gradle.internal.remote.internal.inet.TcpIncomingConnector$Receiver.run(TcpIncomingConnector.java:108)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.accept(java.base@21.0.2/Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.implAccept(java.base@21.0.2/ServerSocketChannelImpl.java:433)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(java.base@21.0.2/ServerSocketChannelImpl.java:399)
+	at org.gradle.internal.remote.internal.inet.TcpIncomingConnector$Receiver.run(TcpIncomingConnector.java:108)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.accept(java.base@21.0.2/Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.implAccept(java.base@21.0.2/ServerSocketChannelImpl.java:433)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(java.base@21.0.2/ServerSocketChannelImpl.java:399)
+	at org.gradle.internal.remote.internal.inet.TcpIncomingConnector$Receiver.run(TcpIncomingConnector.java:108)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Memory manager</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e5570468&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e5570468&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e5570468&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e5570468&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e5570468&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.2/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.2/AbstractQueuedSynchronizer.java:1758)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@21.0.2/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Monitor Deflation Thread</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Notification Thread</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Reference Handler</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.2/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.2/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.2/Reference.java:208)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.2/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.2/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.2/Reference.java:208)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.2/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.2/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.2/Reference.java:208)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.2/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.2/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.2/Reference.java:208)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.2/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.2/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.2/Reference.java:208)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Service Thread</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>Signal Dispatcher</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: RUNNABLE
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>VM Periodic Task Thread</span></th>
+          <td>
+            <pre><code>
+JNI global refs: 24, weak refs: 0
+
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+JNI global refs: 24, weak refs: 0
+
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+JNI global refs: 24, weak refs: 0
+
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+JNI global refs: 24, weak refs: 0
+
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+JNI global refs: 24, weak refs: 0
+
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>VM Thread</span></th>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+          <td>
+            <pre><code>
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>jar transforms</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>jar transforms Thread 10</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>jar transforms Thread 2</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>jar transforms Thread 3</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>jar transforms Thread 4</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>jar transforms Thread 5</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>jar transforms Thread 6</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>jar transforms Thread 7</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>jar transforms Thread 8</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>jar transforms Thread 9</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e3282068&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@21.0.2/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@21.0.2/ThreadPoolExecutor.java:1070)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.2/ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.2/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.2/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.2/Thread.java:1583)
+
+</code></pre>
+          </td>
+        </tr>
+        <tr>
+          <th class="thread-name"><span>main</span></th>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5cee8&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator.awaitStop(DaemonStateCoordinator.java:95)
+	at org.gradle.launcher.daemon.server.Daemon.awaitExpiration(Daemon.java:247)
+	at org.gradle.launcher.daemon.server.Daemon.stopOnExpiration(Daemon.java:221)
+	at org.gradle.launcher.daemon.bootstrap.DaemonMain.doAction(DaemonMain.java:135)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:50)
+	at java.lang.invoke.DirectMethodHandle$Holder.invokeVirtual(java.base@21.0.2/DirectMethodHandle$Holder)
+	at java.lang.invoke.LambdaForm$MH/0x00000008000d8c00.invoke(java.base@21.0.2/LambdaForm$MH)
+	at java.lang.invoke.Invokers$Holder.invokeExact_MT(java.base@21.0.2/Invokers$Holder)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(java.base@21.0.2/DirectMethodHandleAccessor.java:154)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(java.base@21.0.2/DirectMethodHandleAccessor.java:103)
+	at java.lang.reflect.Method.invoke(java.base@21.0.2/Method.java:580)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:60)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:37)
+	at org.gradle.launcher.daemon.bootstrap.GradleDaemon.main(GradleDaemon.java:22)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5cee8&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator.awaitStop(DaemonStateCoordinator.java:95)
+	at org.gradle.launcher.daemon.server.Daemon.awaitExpiration(Daemon.java:247)
+	at org.gradle.launcher.daemon.server.Daemon.stopOnExpiration(Daemon.java:221)
+	at org.gradle.launcher.daemon.bootstrap.DaemonMain.doAction(DaemonMain.java:135)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:50)
+	at java.lang.invoke.DirectMethodHandle$Holder.invokeVirtual(java.base@21.0.2/DirectMethodHandle$Holder)
+	at java.lang.invoke.LambdaForm$MH/0x00000008000d8c00.invoke(java.base@21.0.2/LambdaForm$MH)
+	at java.lang.invoke.Invokers$Holder.invokeExact_MT(java.base@21.0.2/Invokers$Holder)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(java.base@21.0.2/DirectMethodHandleAccessor.java:154)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(java.base@21.0.2/DirectMethodHandleAccessor.java:103)
+	at java.lang.reflect.Method.invoke(java.base@21.0.2/Method.java:580)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:60)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:37)
+	at org.gradle.launcher.daemon.bootstrap.GradleDaemon.main(GradleDaemon.java:22)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5cee8&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator.awaitStop(DaemonStateCoordinator.java:95)
+	at org.gradle.launcher.daemon.server.Daemon.awaitExpiration(Daemon.java:247)
+	at org.gradle.launcher.daemon.server.Daemon.stopOnExpiration(Daemon.java:221)
+	at org.gradle.launcher.daemon.bootstrap.DaemonMain.doAction(DaemonMain.java:135)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:50)
+	at java.lang.invoke.DirectMethodHandle$Holder.invokeVirtual(java.base@21.0.2/DirectMethodHandle$Holder)
+	at java.lang.invoke.LambdaForm$MH/0x00000008000d8c00.invoke(java.base@21.0.2/LambdaForm$MH)
+	at java.lang.invoke.Invokers$Holder.invokeExact_MT(java.base@21.0.2/Invokers$Holder)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(java.base@21.0.2/DirectMethodHandleAccessor.java:154)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(java.base@21.0.2/DirectMethodHandleAccessor.java:103)
+	at java.lang.reflect.Method.invoke(java.base@21.0.2/Method.java:580)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:60)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:37)
+	at org.gradle.launcher.daemon.bootstrap.GradleDaemon.main(GradleDaemon.java:22)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5cee8&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator.awaitStop(DaemonStateCoordinator.java:95)
+	at org.gradle.launcher.daemon.server.Daemon.awaitExpiration(Daemon.java:247)
+	at org.gradle.launcher.daemon.server.Daemon.stopOnExpiration(Daemon.java:221)
+	at org.gradle.launcher.daemon.bootstrap.DaemonMain.doAction(DaemonMain.java:135)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:50)
+	at java.lang.invoke.DirectMethodHandle$Holder.invokeVirtual(java.base@21.0.2/DirectMethodHandle$Holder)
+	at java.lang.invoke.LambdaForm$MH/0x00000008000d8c00.invoke(java.base@21.0.2/LambdaForm$MH)
+	at java.lang.invoke.Invokers$Holder.invokeExact_MT(java.base@21.0.2/Invokers$Holder)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(java.base@21.0.2/DirectMethodHandleAccessor.java:154)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(java.base@21.0.2/DirectMethodHandleAccessor.java:103)
+	at java.lang.reflect.Method.invoke(java.base@21.0.2/Method.java:580)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:60)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:37)
+	at org.gradle.launcher.daemon.bootstrap.GradleDaemon.main(GradleDaemon.java:22)
+
+</code></pre>
+          </td>
+          <td>
+            <pre><code>   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.2/Native Method)
+	- parking to wait for  &lt;0x00000007e0c5cee8&gt; (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.2/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.2/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.2/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.2/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.2/AbstractQueuedSynchronizer.java:1707)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator.awaitStop(DaemonStateCoordinator.java:95)
+	at org.gradle.launcher.daemon.server.Daemon.awaitExpiration(Daemon.java:247)
+	at org.gradle.launcher.daemon.server.Daemon.stopOnExpiration(Daemon.java:221)
+	at org.gradle.launcher.daemon.bootstrap.DaemonMain.doAction(DaemonMain.java:135)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:50)
+	at java.lang.invoke.DirectMethodHandle$Holder.invokeVirtual(java.base@21.0.2/DirectMethodHandle$Holder)
+	at java.lang.invoke.LambdaForm$MH/0x00000008000d8c00.invoke(java.base@21.0.2/LambdaForm$MH)
+	at java.lang.invoke.Invokers$Holder.invokeExact_MT(java.base@21.0.2/Invokers$Holder)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(java.base@21.0.2/DirectMethodHandleAccessor.java:154)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(java.base@21.0.2/DirectMethodHandleAccessor.java:103)
+	at java.lang.reflect.Method.invoke(java.base@21.0.2/Method.java:580)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:60)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:37)
+	at org.gradle.launcher.daemon.bootstrap.GradleDaemon.main(GradleDaemon.java:22)
+
+</code></pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <script type="text/javascript">const rows = document.querySelectorAll(".thread-name");
+
+document.getElementById("thread-name-filter").addEventListener("keyup", (e) => {
+    const filterValue = e.target.value.toLowerCase();
+    rows.forEach((row) => {
+        const threadName = row.textContent.toLowerCase();
+        if (threadName.indexOf(filterValue) > -1) {
+            row.parentElement.classList.remove("hidden");
+        } else {
+            row.parentElement.classList.add("hidden");
+        }
+    });
+});</script>
+  </body>
+</html>

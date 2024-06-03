@@ -136,9 +136,6 @@ class ThreadDumpRenderer(private val threadDumps: List<ThreadDump>) {
         table {
             color: #dbdbdb;
         }
-        tbody tr:hover {
-            color: #ffbe85;
-        }
         th {
             background-color: rgb(2, 5, 11);
             font-size: 12px;

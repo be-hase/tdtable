@@ -7,6 +7,12 @@ kotlin {
     macosArm64 {
         binaries { executable() }
     }
+    macosX64 {
+        binaries { executable() }
+    }
+    linuxX64 {
+        binaries { executable() }
+    }
     sourceSets {
         commonMain {
             dependencies {

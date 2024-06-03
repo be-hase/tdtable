@@ -11,5 +11,8 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
+### kotlin ###
+.kotlin
+
 ### Mac OS ###
 .DS_Store

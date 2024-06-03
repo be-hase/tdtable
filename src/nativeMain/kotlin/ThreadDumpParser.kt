@@ -5,7 +5,8 @@ class ThreadDumpParser(private val path: Path) {
     private val text = FileSystem.SYSTEM.read(path) { readUtf8() }
 
     fun parse(): ThreadDump {
-        val timestamp = text.lineSequence().first { it.matches(TIMESTAMP_PATTERN) }
+        val timestamp = text.lineSequence().firstOrNull { it.matches(TIMESTAMP_PATTERN) }
+            ?: error("Invalid thread dump file: $path")
         return ThreadDump(
             path = path,
             timestamp = timestamp,

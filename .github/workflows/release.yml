@@ -1,0 +1,76 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        job:
+          - { runner: macos-latest, target: macosX64, binary-name: tdtable_macos_x64 }
+          - { runner: macos-latest, target: macosArm64, binary-name: tdtable_macos_arm64 }
+          - { runner: ubuntu-latest, target: linuxX64, binary-name: tdtable_linux_x64 }
+          - { runner: ubuntu-latest, target: linuxArm64, binary-name: tdtable_linux_arm64 }
+    runs-on: ${{ matrix.job.runner }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - name: Set up gradle
+        uses: gradle/actions/setup-gradle@v3
+      - name: Build
+        run: ./gradlew ${{ matrix.job.target }}Binaries
+      - name: Rename binary
+        run: mv build/bin/${{ matrix.job.target }}/releaseExecutable/tdtable.kexe build/${{ matrix.job.binary-name }}
+      - name: Archive binary
+        run: |
+          cd build
+          tar -czvf ${{ matrix.job.binary-name }}.tar.gz ${{ matrix.job.binary-name }}
+      - name: Upload as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.job.binary-name }}
+          path: build/${{ matrix.job.binary-name }}.tar.gz
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts/
+      - name: Mkdir assets dir
+        run: |
+          mkdir -p assets
+      - name: Extract binary
+        run: |
+          for file in artifacts/**/*.tar.gz; do
+              tar -xzvf $file -C assets/
+              mv $file assets/
+          done
+      - name: ls assets dir
+        run: |
+          ls -la assets/
+      - name: sha256sum
+        run: |
+          cd assets
+          sha256sum tdtable_* > checksums.txt
+          cat checksums.txt
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: assets/*
+          generate_release_notes: true
+          make_latest: true

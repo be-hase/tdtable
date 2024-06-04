@@ -1,6 +1,6 @@
 # tdtable
 
-You can view multiple thread dumps in a table layout.
+You can view multiple JVM thread dumps in a table layout.
 
 ![](https://github.com/be-hase/tdtable/assets/903482/2cc02f79-6231-4326-931d-9c8909345954)
 
@@ -36,3 +36,8 @@ wget "https://github.com/be-hase/tdtable/releases/latest/download/$BINARY.tar.gz
 wget "https://github.com/be-hase/tdtable/releases/latest/download/$BINARY" -O /path/to/tdtable && \
   chmod +x /path/to/tdtable
 ```
+
+## Motivation
+
+When investigating using thread dumps, it is common to output multiple times and check for changes in each thread.
+Displaying in a table layout makes it easier to examine the changes in each thread.

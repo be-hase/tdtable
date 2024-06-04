@@ -33,7 +33,8 @@ wget "https://github.com/be-hase/tdtable/releases/latest/download/$BINARY.tar.gz
 #### Plain binary
 
 ```bash
-wget "https://github.com/be-hase/tdtable/releases/latest/download/$BINARY" -O /path/to/tdtable && \
+wget "https://github.com/be-hase/tdtable/releases/latest/download/$BINARY" \
+  -O /path/to/tdtable && \
   chmod +x /path/to/tdtable
 ```
 

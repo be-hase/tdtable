@@ -27,6 +27,7 @@ kotlin {
         commonTest {
             dependencies {
                 implementation(kotlin("test"))
+                implementation("com.willowtreeapps.assertk:assertk:0.28.1")
             }
         }
     }

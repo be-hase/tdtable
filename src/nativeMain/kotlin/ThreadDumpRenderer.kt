@@ -26,7 +26,7 @@ import kotlinx.html.unsafe
 
 class ThreadDumpRenderer(private val threadDumps: List<ThreadDump>) {
 
-    private fun data(): Map<ThreadDumpIdentifier, Map<ThreadName, List<Stacktrace>>> {
+    internal fun data(): Map<ThreadDumpIdentifier, Map<ThreadName, List<Stacktrace>>> {
         return threadDumps.associateBy(
             { threadDump -> ThreadDumpIdentifier(threadDump.path.toString(), threadDump.timestamp) },
             { threadDump ->
@@ -38,13 +38,13 @@ class ThreadDumpRenderer(private val threadDumps: List<ThreadDump>) {
         )
     }
 
-    private fun columns(): List<ThreadDumpIdentifier> {
+    internal fun columns(): List<ThreadDumpIdentifier> {
         return threadDumps
             .map { ThreadDumpIdentifier(it.path.toString(), it.timestamp) }
             .sortedBy { it.timestamp }
     }
 
-    private fun rows(): List<ThreadName> {
+    internal fun rows(): List<ThreadName> {
         return threadDumps
             .flatMap { threadDump -> threadDump.threadInfos.map { it.threadName } }
             .distinct()
@@ -122,7 +122,7 @@ class ThreadDumpRenderer(private val threadDumps: List<ThreadDump>) {
         }.toString()
     }
 
-    private data class ThreadDumpIdentifier(
+    internal data class ThreadDumpIdentifier(
         val path: String,
         val timestamp: String,
     )

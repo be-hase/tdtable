@@ -24,6 +24,7 @@ class ThreadDumpParser(private val path: Path) {
                 } else {
                     context.createThreadInfoOrNull()?.let { yield(it) }
                     context.nextThread(matchResult.groupValues[1])
+                    context.appendStacktrace(line)
                 }
             }
             context.createThreadInfoOrNull()?.let { yield(it) }

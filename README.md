@@ -2,7 +2,7 @@
 
 You can view multiple JVM thread dumps in a table layout.
 
-![](https://github.com/be-hase/tdtable/assets/903482/2cc02f79-6231-4326-931d-9c8909345954)
+![](./docs/screen.png)
 
 ## Usage
 

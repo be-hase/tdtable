@@ -1,5 +1,5 @@
 plugins {
-    kotlin("multiplatform") version "2.0.10"
+    kotlin("multiplatform") version "2.0.20"
     id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
 }
 

@@ -19,7 +19,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation("com.squareup.okio:okio:3.9.1")
+                implementation("com.squareup.okio:okio:3.10.1")
                 implementation("org.jetbrains.kotlinx:kotlinx-html:0.11.0")
                 implementation("com.github.ajalt.clikt:clikt:4.4.0")
             }

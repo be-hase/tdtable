@@ -38,7 +38,7 @@ jobs:
           cd build
           tar -czvf ${{ matrix.job.binary-name }}.tar.gz ${{ matrix.job.binary-name }}
       - name: Upload as artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.job.binary-name }}
           path: build/${{ matrix.job.binary-name }}.tar.gz
@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           path: artifacts/
       - name: Mkdir assets dir

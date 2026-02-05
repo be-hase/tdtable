@@ -21,7 +21,7 @@ kotlin {
             dependencies {
                 implementation("com.squareup.okio:okio:3.16.4")
                 implementation("org.jetbrains.kotlinx:kotlinx-html:0.12.0")
-                implementation("com.github.ajalt.clikt:clikt:4.4.0")
+                implementation("com.github.ajalt.clikt:clikt:5.1.0")
             }
         }
         commonTest {
